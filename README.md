@@ -55,7 +55,7 @@ git clone https://github.com/php/php-src.git ./
   --with-mhash \
   --with-mysqli=mysqlnd \
   --with-openssl \
-  --with-pdo-firebird
+  --with-pdo-firebird \
   --with-pdo-mysql=mysqlnd \
   --with-pdo-pgsql \
   --with-pdo-sqlite \
