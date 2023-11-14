@@ -1,0 +1,30 @@
+version: '3'
+services:
+
+  build:
+    build:
+      context: containers/build/
+    command: tail -f /dev/null
+    environment:
+      - PGHOST=pgsql
+      - PGUSER=postgres
+      - LANG=C.UTF-8
+    volumes:
+      - ./containers/mysql/my.cnf:/home/build/.my.cnf:ro
+      - build-php-src:/home/build/php-src
+
+  pgsql:
+    image: postgres
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+  
+  mysql:
+    image: mysql
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1
+      - MYSQL_USER=test
+      - MYSQL_DATABASE=test
+      - MYSQL_PASSWORD=test
+
+volumes:
+  build-php-src:

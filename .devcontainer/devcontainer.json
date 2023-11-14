@@ -1,0 +1,31 @@
+{
+  "name": "php-src",
+
+  "dockerComposeFile": ["../docker-compose.yml"],
+
+  "service": "build",
+  "updateRemoteUserUID": false,
+
+  "workspaceFolder": "/home/build/php-src",
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.renderWhitespace": "boundary",
+        "intelephense.environment.phpVersion": "8.2.0",
+        "php-cs-fixer.executablePath":
+        "php.suggest.basic": false,
+        "php.validate.enable": false
+      },
+
+      "extensions": [
+        "bmewburn.vscode-intelephense-client",
+        "donjayamanne.githistory",
+        "eamodio.gitlens",
+        "EditorConfig.EditorConfig",
+        "mhutchie.git-graph"
+      ]
+    }
+  }
+}
