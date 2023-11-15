@@ -9,6 +9,12 @@ services:
       - PGHOST=pgsql
       - PGUSER=postgres
       - LANG=C.UTF-8
+      # For Testing
+      - PDO_FIREBIRD_TEST_DATABASE=test.fdb
+      - PDO_FIREBIRD_TEST_DSN=firebird:dbname=firebird:test.fdb
+      - PDO_FIREBIRD_TEST_PASS=test
+      - PDO_FIREBIRD_TEST_USER=test
+
     volumes:
       - ./containers/mysql/my.cnf:/home/build/.my.cnf:ro
       - build-php-src:/home/build/php-src
@@ -25,6 +31,14 @@ services:
       - MYSQL_USER=test
       - MYSQL_DATABASE=test
       - MYSQL_PASSWORD=test
+
+  firebird:
+    image: jacobalberty/firebird
+    environment:
+      - ISC_PASSWORD=test
+      - FIREBIRD_DATABASE=test.fdb
+      - FIREBIRD_USER=test
+      - FIREBIRD_PASSWORD=test
 
 volumes:
   build-php-src:
