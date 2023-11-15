@@ -39,6 +39,7 @@ RUN apt update \
     pkg-config \
     postgresql-client \
     re2c \
+    ssh \
     sqlite3 \
     sudo \
     tree \
