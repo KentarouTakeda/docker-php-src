@@ -14,7 +14,6 @@
         "diffEditor.ignoreTrimWhitespace": false,
         "editor.renderWhitespace": "boundary",
         "intelephense.environment.phpVersion": "8.2.0",
-        "php-cs-fixer.executablePath":
         "php.suggest.basic": false,
         "php.validate.enable": false
       },
