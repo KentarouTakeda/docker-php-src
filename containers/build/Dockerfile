@@ -61,6 +61,7 @@ COPY sudoers /etc/sudoers.d/all
 
 RUN adduser build
 USER build
+COPY gitignore /home/build/
 RUN mkdir /home/build/php-src
 WORKDIR /home/build/php-src
 ENV PATH="${PATH}:/home/build/php-src/sapi/cli/"
