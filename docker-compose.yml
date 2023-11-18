@@ -26,7 +26,7 @@ services:
       - PGSQL_TEST_CONNSTR=host=pgsql
 
     volumes:
-      - ./containers/mysql/my.cnf:/home/build/.my.cnf:ro
+      - ./containers/build/my.cnf:/home/build/.my.cnf:ro
       - build-php-src:/home/build/php-src
 
   pgsql:
