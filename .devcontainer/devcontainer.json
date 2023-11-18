@@ -23,7 +23,8 @@
         "donjayamanne.githistory",
         "eamodio.gitlens",
         "EditorConfig.EditorConfig",
-        "mhutchie.git-graph"
+        "mhutchie.git-graph",
+        "ms-vscode.cpptools"
       ]
     }
   }
