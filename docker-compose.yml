@@ -6,14 +6,24 @@ services:
       context: containers/build/
     command: tail -f /dev/null
     environment:
+      # For Command Line
       - PGHOST=pgsql
       - PGUSER=postgres
       - LANG=C.UTF-8
       # For Testing
+      - MYSQL_TEST_HOST=mysql
+      - MYSQL_TEST_PASSWD=test
+      - MYSQL_TEST_USER=test
       - PDO_FIREBIRD_TEST_DATABASE=test.fdb
       - PDO_FIREBIRD_TEST_DSN=firebird:dbname=firebird:test.fdb
       - PDO_FIREBIRD_TEST_PASS=test
       - PDO_FIREBIRD_TEST_USER=test
+      - PDO_MYSQL_TEST_DSN=mysql:host=mysql;dbname=test
+      - PDO_MYSQL_TEST_HOST=mysql
+      - PDO_MYSQL_TEST_PASS=test
+      - PDO_MYSQL_TEST_USER=test
+      - PDO_PGSQL_TEST_DSN=pgsql:host=pgsql port=5432 dbname=postgres user=postgres
+      - PGSQL_TEST_CONNSTR=host=pgsql
 
     volumes:
       - ./containers/mysql/my.cnf:/home/build/.my.cnf:ro
@@ -26,6 +36,7 @@ services:
   
   mysql:
     image: mysql
+    command: --log-bin-trust-function-creators=1
     environment:
       - MYSQL_ALLOW_EMPTY_PASSWORD=1
       - MYSQL_USER=test
