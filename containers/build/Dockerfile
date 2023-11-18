@@ -10,6 +10,7 @@ RUN apt update \
     curl \
     firebird-dev \
     gcc \
+    gdb \
     git \
     gnupg \
     jq \
