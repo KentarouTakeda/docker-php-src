@@ -22,7 +22,6 @@
 
       "extensions": [
         "bmewburn.vscode-intelephense-client",
-        "donjayamanne.githistory",
         "eamodio.gitlens",
         "EditorConfig.EditorConfig",
         "mhutchie.git-graph",
