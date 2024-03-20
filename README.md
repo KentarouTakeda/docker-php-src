@@ -60,7 +60,6 @@ git clone https://github.com/php/php-src.git ./
   --with-pdo-pgsql \
   --with-pdo-sqlite \
   --with-pgsql \
-  --with-pspell \
   --with-readline \
   --with-sodium \
   --with-tidy \
