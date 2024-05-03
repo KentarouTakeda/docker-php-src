@@ -50,7 +50,6 @@ git clone https://github.com/php/php-src.git ./
   --with-gmp \
   --with-iconv \
   --with-jpeg \
-  --with-kerberos \
   --with-libxml \
   --with-mhash \
   --with-mysqli=mysqlnd \
