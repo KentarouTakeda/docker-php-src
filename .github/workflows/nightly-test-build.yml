@@ -61,3 +61,7 @@ jobs:
               --with-xsl
               --with-zip
               --with-zlib
+
+      - run: docker compose exec build make -j$(nproc)
+      - run: docker compose exec build php -m
+      - run: docker compose exec build php -i
