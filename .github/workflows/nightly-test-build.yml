@@ -11,9 +11,9 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
-      - run: docker compose build
-      - run: docker compose up -d
-      - run: docker compose exec build git clone --depth=1 https://github.com/php/php-src.git .
+      - run: docker compose build --progress=plain
+      - run: docker compose up -d --quiet-pull
+      - run: docker compose exec build git clone --quiet --depth=1 https://github.com/php/php-src.git .
       - run: docker compose exec build ./buildconf
 
       - run:
