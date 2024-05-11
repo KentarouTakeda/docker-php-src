@@ -36,7 +36,7 @@ RUN apt update \
     libzip-dev \
     make \
     mysql-client \
-    netcat \
+    netcat-openbsd \
     pkg-config \
     postgresql-client \
     re2c \
