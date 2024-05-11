@@ -1,0 +1,73 @@
+name: Nightly Test Build
+on:
+  push:
+  schedule:
+   - cron: "0 21 * * *"
+  workflow_dispatch: ~
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/build-push-action@v5
+        with:
+          context: containers/build/
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - run: docker compose up -d --quiet-pull
+      - run: docker compose exec build git clone --quiet --depth=1 https://github.com/php/php-src.git .
+      - run: docker compose exec build ./buildconf
+
+      - run:
+          docker compose exec build
+            ./configure
+              --enable-bcmath
+              --enable-calendar
+              --enable-dba
+              --enable-dl-test=shared
+              --enable-exif
+              --enable-ftp
+              --enable-gd
+              --enable-mbstring
+              --enable-option-checking=fatal
+              --enable-pcntl
+              --enable-shmop
+              --enable-soap
+              --enable-sockets
+              --enable-sysvmsg
+              --enable-sysvsem
+              --enable-sysvshm
+              --enable-xmlreader
+              --enable-zend-test
+              --with-bz2
+              --with-curl
+              --with-ffi
+              --with-freetype
+              --with-gettext
+              --with-gmp
+              --with-iconv
+              --with-jpeg
+              --with-libxml
+              --with-mhash
+              --with-mysqli=mysqlnd
+              --with-openssl
+              --with-pdo-firebird
+              --with-pdo-mysql=mysqlnd
+              --with-pdo-pgsql
+              --with-pdo-sqlite
+              --with-pgsql
+              --with-readline
+              --with-sodium
+              --with-tidy
+              --with-webp
+              --with-xsl
+              --with-zip
+              --with-zlib
+
+      - run: docker compose exec build make -j$(nproc)
+      - run: docker compose exec build php -m
+      - run: docker compose exec build php -i
