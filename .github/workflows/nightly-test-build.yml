@@ -1,0 +1,14 @@
+name: Nightly Test Build
+on:
+  push:
+  schedule:
+   - cron: "0 21 * * *"
+  workflow_dispatch: ~
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - run: docker compose build
