@@ -16,6 +16,20 @@
         "diffEditor.ignoreTrimWhitespace": false,
         "editor.renderWhitespace": "boundary",
         "intelephense.environment.phpVersion": "8.3.0",
+        "intelephense.files.exclude": [
+          "**/.git/**",
+          "**/.svn/**",
+          "**/.hg/**",
+          "**/CVS/**",
+          "**/.DS_Store/**",
+          "**/node_modules/**",
+          "**/bower_components/**",
+          "**/vendor/**/{Tests,tests}/**",
+          "**/.history/**",
+          "**/vendor/**/vendor/**",
+          "**/*.stub.php",
+          "**/build/**"
+        ],
         "php.suggest.basic": false,
         "php.validate.enable": false
       },
