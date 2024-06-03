@@ -20,7 +20,7 @@ Then enter the following command:
 git clone https://github.com/php/php-src.git ./
 
 # Generate configure
-./buildconf
+./buildconf -f
 
 # **For example:** configure the build settings as follows:
 ./configure \
