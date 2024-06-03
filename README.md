@@ -27,6 +27,7 @@ git clone https://github.com/php/php-src.git ./
   --enable-bcmath \
   --enable-calendar \
   --enable-dba \
+  --enable-debug \
   --enable-dl-test=shared \
   --enable-exif \
   --enable-ftp \
