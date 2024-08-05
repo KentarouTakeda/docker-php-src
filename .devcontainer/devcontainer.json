@@ -13,9 +13,23 @@
   "customizations": {
     "vscode": {
       "settings": {
+        "files.associations": {
+          "*.c": "c",
+          "*.cc": "cpp",
+          "*.cpp": "cpp",
+          "*.cxx": "cpp",
+          "*.h": "c",
+          "*.hpp": "cpp",
+          "*.phpt": "php"
+        },
+
         "diffEditor.ignoreTrimWhitespace": false,
+        "editor.detectIndentation": false,
+        "editor.insertSpaces": false,
         "editor.renderWhitespace": "boundary",
+        "editor.tabSize": 4,
         "intelephense.environment.phpVersion": "8.3.0",
+
         "intelephense.files.exclude": [
           "**/.git/**",
           "**/.svn/**",
@@ -38,7 +52,10 @@
         "bmewburn.vscode-intelephense-client",
         "eamodio.gitlens",
         "EditorConfig.EditorConfig",
+        "maelvalais.autoconf",
         "mhutchie.git-graph",
+        "ms-azuretools.vscode-docker",
+        "ms-vscode.cpptools-extension-pack",
         "ms-vscode.cpptools"
       ]
     }
