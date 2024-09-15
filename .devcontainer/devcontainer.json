@@ -1,7 +1,7 @@
 {
   "name": "php-src",
 
-  "dockerComposeFile": ["../docker-compose.yml"],
+  "dockerComposeFile": ["../compose.yml"],
 
   "service": "build",
   "updateRemoteUserUID": false,
