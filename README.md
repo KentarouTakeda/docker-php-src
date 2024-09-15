@@ -69,7 +69,7 @@ git clone https://github.com/php/php-src.git ./
   --with-zlib \
 
 # Build the binaries
-make -j$(nproc) 
+make -j$(nproc)
 ```
 
 ## Remarks
