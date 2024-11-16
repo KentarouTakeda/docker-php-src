@@ -14,6 +14,7 @@ RUN apt update \
     git \
     gnupg \
     jq \
+    less \
     libbz2-dev \
     libcurl4-gnutls-dev \
     libffi-dev \
