@@ -41,7 +41,6 @@
           "**/vendor/**/{Tests,tests}/**",
           "**/.history/**",
           "**/vendor/**/vendor/**",
-          "**/*.stub.php",
           "**/build/**"
         ],
         "php.suggest.basic": false,
