@@ -31,6 +31,7 @@ git clone https://github.com/php/php-src.git ./
   --enable-dl-test=shared \
   --enable-exif \
   --enable-ftp \
+  --enable-intl \
   --enable-gd \
   --enable-mbstring \
   --enable-option-checking=fatal \
