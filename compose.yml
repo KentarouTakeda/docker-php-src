@@ -3,7 +3,10 @@ services:
   build:
     build:
       context: containers/build/
-    command: curl -fsSL https://claude.ai/install.sh | bash && tail -f /dev/null
+    command:
+      - sh
+      - -c
+      - (curl -fsSL https://claude.ai/install.sh | bash) && tail -f /dev/null
     environment:
       # For Command Line
       - PGHOST=pgsql
