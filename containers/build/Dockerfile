@@ -20,6 +20,7 @@ RUN apt update \
     libffi-dev \
     libfreetype6-dev \
     libgmp-dev \
+    libicu-dev \
     libjpeg-dev \
     libkrb5-dev \
     libmysqlclient-dev \
