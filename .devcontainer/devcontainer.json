@@ -56,7 +56,7 @@
         "editor.insertSpaces": false,
         "editor.renderWhitespace": "boundary",
         "editor.tabSize": 4,
-        "intelephense.environment.phpVersion": "8.3.0",
+        "intelephense.environment.phpVersion": "8.6.0",
 
         "intelephense.files.exclude": [
           "**/.git/**",
