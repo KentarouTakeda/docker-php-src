@@ -29,7 +29,6 @@ RUN apt update \
     libonig-dev \
     libpng-dev \
     libpq-dev \
-    libpspell-dev \
     libreadline-dev \
     libsodium-dev \
     libsqlite3-dev \
