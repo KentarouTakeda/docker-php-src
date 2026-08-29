@@ -23,6 +23,13 @@
           "*.phpt": "php"
         },
 
+        // cpptools stays for cppdbg.
+        "C_Cpp.intelliSenseEngine": "disabled",
+        "clangd.arguments": [
+          "--background-index",
+          "--compile-commands-dir=${workspaceFolder}"
+        ],
+
         "diffEditor.ignoreTrimWhitespace": false,
         "editor.detectIndentation": false,
         "editor.insertSpaces": false,
@@ -50,6 +57,7 @@
       "extensions": [
         "bmewburn.vscode-intelephense-client",
         "eamodio.gitlens",
+        "llvm-vs-code-extensions.vscode-clangd",
         "EditorConfig.EditorConfig",
         "maelvalais.autoconf",
         "mhutchie.git-graph",

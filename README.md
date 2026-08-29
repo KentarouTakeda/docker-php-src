@@ -69,8 +69,8 @@ git clone https://github.com/php/php-src.git ./
   --with-zip \
   --with-zlib \
 
-# Build the binaries
-make -j$(nproc)
+# Build the binaries (`bear --` generates compile_commands.json for clangd)
+bear -- make -j$(nproc)
 ```
 
 ## Remarks

@@ -4,9 +4,11 @@ RUN apt update \
  && apt install -y --no-install-recommends \
     autoconf \
     bash-completion \
+    bear \
     bison \
     build-essential \
     ca-certificates \
+    clangd \
     curl \
     firebird-dev \
     gcc \
