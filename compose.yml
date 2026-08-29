@@ -9,6 +9,7 @@ services:
       - (curl -fsSL https://claude.ai/install.sh | bash) && tail -f /dev/null
     environment:
       # For Command Line
+      - CLAUDE_CONFIG_DIR=/home/build/.claude
       - PGHOST=pgsql
       - PGUSER=postgres
       - LANG=C.UTF-8
