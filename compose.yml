@@ -30,6 +30,7 @@ services:
     volumes:
       - ./containers/build/my.cnf:/home/build/.my.cnf:ro
       - build-claude:/home/build/.claude
+      - build-gh:/home/build/.config/gh
       - build-php-src:/home/build/php-src
 
   pgsql:
@@ -56,4 +57,5 @@ services:
 
 volumes:
   build-claude:
+  build-gh:
   build-php-src:
