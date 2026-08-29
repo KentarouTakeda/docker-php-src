@@ -50,6 +50,13 @@
           "**/vendor/**/vendor/**",
           "**/build/**"
         ],
+        "files.watcherExclude": {
+          "**/.libs/**": true,
+          "**/*.lo": true,
+          "**/*.o": true,
+          "**/autom4te.cache/**": true
+        },
+
         "php.suggest.basic": false,
         "php.validate.enable": false
       },
