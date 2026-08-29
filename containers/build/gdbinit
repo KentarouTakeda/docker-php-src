@@ -1,0 +1,5 @@
+# gdb declines php-src's .gdbinit and the php_gdb.py embedded in the binary.
+add-auto-load-safe-path /home/build/php-src
+
+# Docker's seccomp profile blocks the personality() call gdb needs for this.
+set disable-randomization off
