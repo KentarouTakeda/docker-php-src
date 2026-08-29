@@ -29,6 +29,7 @@ services:
 
     volumes:
       - ./containers/build/my.cnf:/home/build/.my.cnf:ro
+      - build-claude:/home/build/.claude
       - build-php-src:/home/build/php-src
 
   pgsql:
@@ -54,4 +55,5 @@ services:
       - FIREBIRD_PASSWORD=test
 
 volumes:
+  build-claude:
   build-php-src:
