@@ -13,6 +13,32 @@
   "customizations": {
     "vscode": {
       "settings": {
+        "launch": {
+          "version": "0.2.0",
+          "configurations": [
+            {
+              "name": "php (gdb)",
+              "type": "cppdbg",
+              "request": "launch",
+              "program": "${workspaceFolder}/sapi/cli/php",
+              "args": ["${input:phpScript}"],
+              "cwd": "${workspaceFolder}",
+              "MIMode": "gdb",
+              "setupCommands": [
+                { "text": "-enable-pretty-printing", "ignoreFailures": true }
+              ]
+            }
+          ],
+          "inputs": [
+            {
+              "id": "phpScript",
+              "type": "promptString",
+              "description": "PHP script to run",
+              "default": "/tmp/t.php"
+            }
+          ]
+        },
+
         "files.associations": {
           "*.c": "c",
           "*.cc": "cpp",

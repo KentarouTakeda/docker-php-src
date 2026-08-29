@@ -77,6 +77,7 @@ bear -- make -j$(nproc)
 
 * You can connect to PostgreSQL or MySQL by simply typing `psql` / `mysql`. No command line options are required.
 * `./sapi/cli/` is set in PATH. Just run `php` and the binary you built will be executed.
+* A `php (gdb)` debug configuration is provided by the dev container. Just press F5.
 
 ## Contribution
 
