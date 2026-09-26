@@ -71,6 +71,12 @@
           "**/vendor/**/vendor/**",
           "**/build/**"
         ],
+        "files.exclude": {
+          "**/.libs": true,
+          "**/*.dep": true,
+          "**/*.lo": true,
+          "**/*.o": true
+        },
         "files.watcherExclude": {
           "**/*.lo": true,
           "**/*.o": true
