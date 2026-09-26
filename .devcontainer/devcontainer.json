@@ -79,7 +79,13 @@
         },
 
         "php.suggest.basic": false,
-        "php.validate.enable": false
+        "php.validate.enable": false,
+
+        // Generated; floods search results.
+        "search.exclude": {
+          "Zend/zend_vm_execute.h": true
+        },
+        "search.useGlobalIgnoreFiles": true
       },
 
       "extensions": [
