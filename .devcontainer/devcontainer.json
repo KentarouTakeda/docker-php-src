@@ -72,10 +72,8 @@
           "**/build/**"
         ],
         "files.watcherExclude": {
-          "**/.libs/**": true,
           "**/*.lo": true,
-          "**/*.o": true,
-          "**/autom4te.cache/**": true
+          "**/*.o": true
         },
 
         "php.suggest.basic": false,
